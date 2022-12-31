@@ -7,6 +7,7 @@ import Landing from "./scenes/Landing";
 import lineGradient from "./components/lineGradient";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
+import Testimonials from "./scenes/Testimonials"
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -30,12 +31,14 @@ function App() {
      <Navbar 
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}/>
+        setSelectedPage={setSelectedPage}
+        />
         <div className="w-5/6 mx-auto md:h-full">
           {isDesktop && (
             <DotGroup
             selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}/>
+            setSelectedPage={setSelectedPage}
+            />
           )}
           <Landing setSelectedPage = {setSelectedPage} />
         </div>
@@ -44,8 +47,12 @@ function App() {
           <MySkills/>
         </div>
         <lineGradient/>
-        <div className="w-5/6 mx-auto md:h-full">
+        <div className="w-5/6 mx-auto ">
           <Projects/>
+        </div>
+        <lineGradient/>
+        <div className="w-5/6 mx-auto md:h-full">
+          <Testimonials/>
         </div>
     </div>
   );
