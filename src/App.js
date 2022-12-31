@@ -9,21 +9,23 @@ import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
 import Testimonials from "./scenes/Testimonials"
 import { motion } from "framer-motion";
+import Contact from "./scenes/Contact";
+import Footer from "./scenes/Footer";
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isDesktop  = useMediaQuery("(min-width: 1060px)");
 
-  useEffect(()=>{
-    const handleScroll = () =>{
-      if (window.scrollY === 0) {setIsTopOfPage(true);
-       } else {
-        setIsTopOfPage(false);
-      };  
-     }
-     window.addEventListener("scroll", handleScroll);
-     return ()=> window.removeEventListener("scroll", handleScroll);
-
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+        setSelectedPage("home");
+      }
+      if (window.scrollY !== 0) setIsTopOfPage(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -78,6 +80,17 @@ function App() {
           <Testimonials />
         </motion.div>
       </div>
+      <lineGradient />
+      <div className="w-5/6 mx-auto md:h-full">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("contact")}
+        >
+          <Contact />
+        </motion.div>
+      </div>
+      <Footer/>
     </div>
   );
 };

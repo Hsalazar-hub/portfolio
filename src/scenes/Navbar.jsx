@@ -66,10 +66,11 @@ return  (
           {!isDesktop && isMenuToggled && (
             <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
               {/* Close */}
-              <div className=" flex justify-end p-12">
-                <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+              <button className="pl-2 pt-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
                 <img alt="close-icon" src="../assets/close-icon.svg" />
                 </button>
+              <div className=" flex justify-end p-12">
+                
                 {/*Menu items */}
                 <div className="flex flex-col gap-10 ml[33%] text-2xl text-deep-blue">
                 <Link

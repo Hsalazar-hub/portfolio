@@ -20,10 +20,10 @@ const SocialMediaIcons =()=> {
                 <img src="../assets/facebook.png" alt="facebook-link" />
             </a>
             <a className="hover:opacity-50 transition duration-500"
-            href="https://www.instagram.com/hdsrb112/"
+            href="https://github.com/Hsalazar-hub/"
             target="_blank"
             rel="noreferrer">
-                <img src="../assets/instagram.png" alt="instagram-link" />
+                <img src="../assets/github-sign.png" alt="instagram-link" />
             </a>
 
         </div>
