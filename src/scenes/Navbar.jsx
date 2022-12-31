@@ -64,7 +64,7 @@ return  (
           </button>)}
           {/*Mobile menu*/}
           {!isDesktop && isMenuToggled && (
-            <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+            <div className="fixed right-0 bottom-0 h-full rounded-md bg-blue w-[300px]">
               {/* Close */}
               <button className="pl-2 pt-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
                 <img alt="close-icon" src="../assets/close-icon.svg" />
